@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangrove Swamp - Bengal Tigers' Home</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff7e6;
+            color: #4d2600;
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: url('mangrove.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(210, 100, 0, 0.7); /* Changed to darker shade */
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            max-width: 600px;
+            animation: slideUp 1.2s ease-out;
+        }
+
+        /* Section Headings */
+        section h2 {
+            font-size: 2.5em;
+            color: #e67e22;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Map Section */
+        .map {
+            background: linear-gradient(135deg, #4d2600, #a6633c);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .map img {
+            max-width: 80%;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Threats Section */
+        .threats {
+            background: #000;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .threats-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .threat-item {
+            flex: 0 0 300px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .threat-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px white;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background: linear-gradient(to bottom, #ff8c00, #fff7e6);
+            color: #4d2600;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .impact-section h2 {
+            font-size: 2.5em;
+            color: white;
+            text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+
+        .impact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .impact-item {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .impact-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .impact-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ff8c00;
+        }
+
+        .impact-item p {
+            font-size: 0.9em;
+            color: #4d2600;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .impact-item::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .impact-item:hover::before {
+            opacity: 1;
+        }
+
+        .impact-animation {
+            animation: fadeInScale 1s ease-in-out forwards;
+            transform: scale(0.5);
+            opacity: 0;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* CTA Section */
+        .cta {
+            background: #4d2600;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+        .cta button {
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 30px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta button:hover {
+            background: #cc7000;
+        }
+        
+        /* Navigation Bar */
+        nav {
+          height: 50px;
+          width: 100%;
+          display: flex;
+          background: #555;
+          color: #f1f1f1;
+
+        }
+
+        #righty {
+          justify-content: right;
+          align-items: center;
+        }
+
+        a{
+          text-decoration: none;
+          color: #f1f1f1;
+          font-size: 20px;
+          padding: 25px;
+          align-items: center;
+        }
+        
+        a:hover {
+          background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="logo.png">
+        <p>Roar for Rescue</p>
+        <nav id="righty">
+          <a href="Species.html">Tigris</a>
+          <a href="Involved.html">Get involved</a>
+          <a href="projects.html">News</a>
+          <a href="AboutUS.html">About Us</a>
+          <a href="Ecosystem.html">Habitat</a>
+          <a href="ClimateChange.html">Climate Change</a>
+        </nav>
+      </nav>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Mangrove Swamp</h1>
+        <p>Learn about the homeland of Bengal Tigers, one of the Earth's most vital ecosystems under threat.</p>
+    </div>
+
+    <!-- Ecosystem Overview -->
+    <section class="ecosystem-overview">
+        <iframe src="factors.html" width="100%" height="500px" style="border:none;"></iframe>
+    </section>
+
+    <!-- Map Section -->
+    <div class="map">
+        <h2>Geographical Distribution</h2>
+        <img src="map.png">
+        <img src="southeast.png">
+    </div>
+
+    <!-- Threats Section -->
+    <section class="threats">
+        <h2>Threats</h2>
+        <div class="threats-list">
+            <div class="threat-item">Deforestation</div>
+            <div class="threat-item">Climate Change</div>
+            <div class="threat-item">Agriculture</div>
+            <div class="threat-item">Shrimp Farming</div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <h2>Impact on Natural Cycles</h2>
+        <div class="impact-container">
+            <!-- Carbon Cycle -->
+            <div class="impact-item impact-animation" style="animation-delay: 0.3s;">
+                <h3>Carbon Cycle</h3>
+                <p>Mangroves store significant amounts of carbon, but deforestation releases it into the atmosphere.</p>
+            </div>
+
+            <!-- Nitrogen Cycle -->
+            <div class="impact-item impact-animation" style="animation-delay: 0.6s;">
+                <h3>Nitrogen Cycle</h3>
+                <p>Disrupted nitrogen cycles lead to eutrophication, harming aquatic life and reducing biodiversity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="cta">
+        <h2>Join Us to Save the Mangroves</h2>
+        <div class="cta-buttons">
+            <button onclick="alert('Redirecting to Get Involved page...')">Get Involved</button>
+            <button onclick="alert('Redirecting to Donation page...')">Donate</button>
+        </div>
+    </div>
+</body>
+
+</html>

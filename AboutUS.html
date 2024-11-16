@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Team | Roar for Rescue</title>
+  <style>
+    nav{
+      height: 70px;
+      width: 100%;
+      display: flex;
+      background: #555;
+      color: #f1f1f1;
+
+    }
+    #righty{
+      justify-content: right;
+      align-items: center;
+    }
+
+    a{
+      text-decoration: none;
+      color: #f1f1f1;
+      font-size: 20px;
+      padding: 25px;
+      align-items: center;
+    }
+
+    a:hover{
+      background-color: orangered;
+    }
+    #formed{
+      padding:0px;
+      color: blue;
+      font-size: 16px;
+    }
+    #formed:hover{
+      background-color:transparent;
+    }
+    .top-container{
+      background-image: url("logo.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      
+    }
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background and Slideshow Container */
+    .bKG{
+      padding: 15px;
+      background-color: #d1a7a1;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .slideshow-container {
+      width: 100%;
+      max-width: 600px;
+      position: relative;
+      overflow: hidden;
+      background-color: #f7f4e9;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Individual Slides */
+    .slide {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    /* Image Styling */
+    .slide img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Name and Additional Details */
+    .name {
+      font-size: 1.5em;
+      margin-top: 15px;
+      color: #e67e22;
+      text-align: center;
+    }
+
+    .details {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #555;
+      text-align: center;
+    }
+
+    /* Navigation Arrows */
+    .arrow {
+      cursor: pointer;
+      position: absolute; /* Anchor to the slideshow container */
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-50%);
+      font-size: 1.5em;
+      user-select: none;
+      z-index: 10; /* Ensure arrows are above other content */
+    }
+
+    .arrow:hover {
+      background-color: #e67e22;
+    }
+
+    .left-arrow {
+      left: 10px; /* Position inside the left edge of the container */
+    }
+
+    .right-arrow {
+      right: 10px; /* Position inside the right edge of the container */
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="logo.png" style="padding: 5px;">
+    <p>Roar for Rescue</p>
+    <nav id="righty">
+      <a href="Species.html">Tigris</a>
+      <a href="Involved.html">Get involved</a>
+      <a href="projects.html">News</a>
+      <a href="AboutUS.html">About Us</a>
+      <a href="Ecosystem.html">Habitat</a>
+      <a href="ClimateChange.html">Climate Change</a>
+    </nav>
+  </nav>
+  <div class="top-container">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+  
+  <div class="bKG">
+    <div class="slideshow-container">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="ashvina.jpg" alt="Ashvina Shah">
+        <div class="name">Ashvina Shah</div>
+        <div class="details">
+          <p><strong>Age:</strong> 26</p>
+          <p>I founded the organization Roar for Rescue in March of 2022, after a trip to the northern India. During the trip, I become aware of the practices of hunting, poaching and capturing of tigers by local communties. This injustice instigated me to find a way to stop this harsh treatement. After establishing this non-profit and gathering enough support, the Roar for Rescue team was able to pass a bill which made hunting, poaching and capturing Tigers for any reason illegal and punishable by fines and jail time. Afterward, we expanded our goal to be worldwide rather than interregional. Our mission is to remove the Bengal Tigers from the IUCN Red List of Threatened Species and the WWF list of Endangered Species, through a combition of laws, volunteer and restoration program, and raising awareness of this issue.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="alex.png" alt="Alex Johnson">
+        <div class="name">Alex Johnson</div>
+        <div class="details">
+          <p><strong>Age:</strong> 36</p>
+          <p><strong>Residence:</strong> Dhaka, Bangladesh</p>
+          <p><strong>Job:</strong> Head of Bangladesh chapter</p>
+          <p><strong>Fun Fact:</strong> Alex has a soft spot for tiger cubs and dreams of creating the largest tiger
+            rescue sanctuary.</p>
+          <p><strong>Family:</strong> Proud father of two, and often visits the sanctuary with his daughter.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="raj.png" alt="Raj Mehta">
+        <div class="name">Raj Mehta</div>
+        <div class="details">
+          <p><strong>Age:</strong> 40</p>
+          <p><strong>Residence:</strong> Chitwan, Nepal</p>
+          <p><strong>Job:</strong> Head of Nepal chapter</p>
+          <p><strong>Fun Fact:</strong> Raj is an expert at mimicry and can make sounds that attract curious
+            tigers safely.</p>
+          <p><strong>Family:</strong> Married with three kids, who are all junior tiger ambassadors in their school.</p>
+        </div>
+      </div>
+      
+      <!-- Slide 4 -->
+      <div class="slide">
+        <img src="laila.png" alt="Laila Hassan">
+        <div class="name">Laila Hassan</div>
+        <div class="details">
+              <p><strong>Age:</strong> 34</p>
+              <p><strong>Residence:</strong> Jakarta, Indonesia</p>
+              <p><strong>Job:</strong> Head of SouthEast Asia chapter</p>
+              <p><strong>Fun Fact:</strong> Laila has a knack for storytelling and captivates local communities
+                  with tiger tales.</p>
+              <p><strong>Family:</strong> Grew up in a large family of animal lovers; her cousin runs a big cat
+                  sanctuary.</p>
+          </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide">
+          <img src="manya.png" alt="Maya Patel">
+          <div class="name">Manya Kausleiya</div>
+          <div class="details">
+              <p><strong>Age:</strong> 29</p>
+              <p><strong>Residence:</strong> Kolkata, India</p>
+              <p><strong>Fun Fact:</strong> Maya is a vegetarian and loves cooking tiger-friendly veggie meals for
+                  outreach events.</p>
+              <p><strong>Job:</strong> Vice president of Roar for Rescue Organization</p>
+              <p><strong>Family:</strong> Comes from a family of wildlife conservationists, with her brother also
+                  working in tiger research.</p>
+          </div>
+      </div>
+  
+      <!-- Navigation Arrows -->
+      <div class="arrow left-arrow" onclick="changeSlide(-1)">&#10094;</div>
+      <div class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</div>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+  </script>
+  
+  <div class = "bKG">
+    <div class="slideshow-container" style="width:400px;">
+      <h2 class="name">Location</h2><br>
+      <div class="details">
+      <p>Based in India</p><br>
+      <p><b>Subchapters</b> in Nepal, Bangladesh, Pakistan, Tibet, Bhutan, and Indonesia</p><br>
+      <p><b>Sancutaries</b> in Himachal Pradesh, Goa, Rajastan, Sundarban Bangaldesh, Nepal, Paro Valley, and much more through parteners, construction and government</p>
+      </div>
+    </div>
+    
+    <div style="margin-left: 30px; width:400px;">
+      <div class="slideshow-container">
+        <h2 class="name">Contact</h2><br>
+        <div class="details">
+          <p>Based in India</p><br>
+          <p><b>Email: </b>roarforrescue@gmail.com</p><br>
+          <p><b>Phone: </b>+91 9110029383</p><br>
+          <p><b>Handle-instagram, facebook and X: </b>@RoaringRescue</p>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-left: 30px; width:500px;">
+      <div class="slideshow-container">
+        <h2 class="name">Get Involved</h2><br>
+        <div class="details">
+          <p><b>Paid Jobs: </b>Currently we have three openings for a reasearch specialist and 2 zoologist for sanctuary in Nepal.</p><br>
+          <p><b>Volunteer: </b>We always welcome new volunteers no matter where they are located and what skills they have, there is always room for another supporter.</p><br>
+          <p><b>Youth and Students: </b>While students have a limited aviability, students are always become to apply for outreach, volunteer for local events and even intern/help at local sanctuaries if possible.</p><br>
+          <p>For all, <a href="Involved.html" id="formed">apply through the form</a> and/or send an email for a response. Our HR and recruiting team is very diligent and will repsond within 2 days max.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <iframe src="mission.html" width="100%" height="500px" style="border:none;"></iframe>
+</body>
+</html>

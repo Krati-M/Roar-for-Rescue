@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+
+.top-container {
+  background-image: url('tigerBGhome.jpg');
+  filter: brightness(50%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: right;
+  text-align: center;
+  color: white;
+}
+
+#heads{
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    font-size: 40px
+  }
+
+  100% {
+    opacity: 1;
+    font-size: 70px
+  }
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background: #555;
+  color: #f1f1f1;
+
+}
+
+#righty {
+  justify-content: right;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 20px;
+  padding: 25px;
+  align-items: center;
+}
+
+a:hover {
+  background-color: orangered;
+}
+
+img{
+  justify-content: left;
+  padding: 5px;
+}
+
+.achieved{
+   width: 60%;
+   margin-left: 25%;
+   text-align: justify;
+}

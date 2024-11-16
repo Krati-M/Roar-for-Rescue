@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengal Tiger Awareness Wall</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Awareness Wall Grid */
+        .awareness-wall {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            width: 480px;
+            height: 480px;
+            gap: 0; /* No space between tiles for a patchwork effect */
+        }
+
+        /* Central Mission Tile */
+        .mission-goal {
+            background-color: #e67e22;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            grid-column: 2 / span 2;
+            grid-row: 2 / span 2;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Smaller Tiles */
+        .tile {
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 0.8em;
+            overflow: hidden;
+        }
+
+        /* Tile Colors */
+        .tile:nth-child(4n+1) {
+            background-color: #EEA667;
+        }
+
+        .tile:nth-child(4n+2) {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .tile:nth-child(4n+3) {
+            background-color: #333;
+            color: white;
+        }
+
+        .tile:nth-child(4n+4) {
+            background-color: black;
+            color: white;
+        }
+
+        /* Hover Effect */
+        .tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icon and Title in Tiles */
+        .tile i {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .tile-title {
+            font-size: 0.75em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Pop-up Overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+
+        .popup-overlay.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Pop-up Content */
+        .popup-content {
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: popup 0.3s ease-out;
+        }
+
+        @keyframes popup {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="awareness-wall">
+        <!-- Smaller Tiles around the Mission Goal -->
+        <div class="tile" onclick="showPopup('Law Enforcement', 'Stronger policies to prevent poaching and illegal hunting. Our first bill passed in Septemeber 2022 had stricter policing and law against the hunting and capturing of Bengal Tigers in HP, India')">
+            <i>🐅</i>
+            <div class="tile-title">Law Enforcement</div>
+        </div>
+        <div class="tile" onclick="showPopup('Habitat Restoration', 'Efforts to restore tiger habitats for sustainable living. Our biggest project has been restoring an abandoned shrimp farm in Dublar Char, Bangladesh. We reintroduced two mothers and her cubs into the wild after completion')">
+            <i>🌿</i>
+            <div class="tile-title">Habitat Restoration</div>
+        </div>
+        <div class="tile" onclick="showPopup('Volunteer Programs', 'Engaging communities to actively participate in tiger conservation. Consisting of over 100 individuals spanning 6 different countries, most of our projects are handled and made possible due to these dedicated group')">
+            <i>🤝</i>
+            <div class="tile-title">Volunteer Programs</div>
+        </div>
+        <div class="tile" onclick="showPopup('Outreach Education', 'Educating communities on the importance of tiger conservation.')">
+            <i>📚</i>
+            <div class="tile-title">Outreach Education</div>
+        </div>
+
+        <!-- Mission Goal occupying the center 2x2 space -->
+        <div class="mission-goal">
+            Our mission is to remove Bengal Tigers from the IUCN Red List and protect their habitat.
+        </div>
+        
+        <div class="tile" onclick="showPopup('Tiger Census', 'Regularly monitoring tiger populations to track progress through surveillance that does not harm the ecosystem and chips on the tigers in known poaching grounds")>
+            <i>📊</i>
+            <div class="tile-title">Tiger Census</div>
+        </div>
+        <div class="tile" onclick="showPopup('Local Legislation', 'Implementing local laws to ensure the safety of Bengal tigers. We have passed laws like the TigersForLife law in Kerala, India to protect a swath of mangrove swamps on its coast.')">
+            <i>⚖️</i>
+            <div class="tile-title">Local Legislation</div>
+        </div>
+        <div class="tile" onclick="showPopup('Sanctuary Development', 'Developing protected sanctuaries for safe tiger breeding. We have built, funded and partned with sanctuarys that help protect, heal and maintain the population of bengal of tiger')">
+            <i>🏞️</i>
+            <div class="tile-title">Sanctuary Development</div>
+        </div>
+        <div class="tile" onclick="showPopup('Research & Innovation', 'Innovating new methods for tracking and conserving tigers.')">
+            <i>🔬</i>
+            <div class="tile-title">Research & Innovation</div>
+        </div>
+        <div class="tile" onclick="showPopup('Community Support', 'Gathering support from local communities for tiger protection. With outreach, media and local campaigns, raising local awareness in communties where tigers are known to wander into')">
+            <i>🏘️</i>
+            <div class="tile-title">Community Support</div>
+        </div>
+        <div class="tile" onclick="showPopup('Public Awareness', 'Spreading awareness about tiger conservation globally. Our annual TigersTry event in India, Bhutan and Bangladesh in 2024 had over 30k people attend overall')">
+            <i>📢</i>
+            <div class="tile-title">Public Awareness</div>
+        </div>
+        <div class="tile" onclick="showPopup('Eco-Tourism', 'Promoting eco-tourism to generate funds for conservation.')">
+            <i>🌍</i>
+            <div class="tile-title">Eco-Tourism</div>
+        </div>
+        <div class="tile" onclick="showPopup('Youth Program', 'Youth Outreach program during the fall that selects 12-20 16-22 years old passionate to volunteer and engage with our many different projects')">
+            <i>🌍</i>
+            <div class="tile-title">Youth Outreach</div>
+        </div>
+    </div>
+
+    <!-- Pop-up Overlay and Content -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup()">×</button>
+            <h2 id="popupTitle">Popup Title</h2>
+            <p id="popupDescription">Popup description content goes here.</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the popup with dynamic content
+        function showPopup(title, description) {
+            document.getElementById('popupTitle').innerText = title;
+            document.getElementById('popupDescription').innerText = description;
+            document.getElementById('popupOverlay').classList.add('show');
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('popupOverlay').classList.remove('show');
+        }
+    </script>
+</body>
+
+</html>

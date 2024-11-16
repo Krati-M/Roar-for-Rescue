@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+
+.top-container {
+  background-image: url('tigerBGhome.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left center;
+  padding: 30px;
+  text-align: center;
+  color: white;
+} 
+h1{
+  font-size: 70px;
+}
+
+nav{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background: #555;
+  color: #f1f1f1;
+
+}
+#righty{
+  justify-content: right;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 20px;
+  padding: 25px;
+  align-items: center;
+}
+
+a:hover{
+  background-color: orangered;
+}
+
+img{
+  justify-content: left;
+  padding: 5px;
+}
+*{
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.333%;
+  padding: 10px;
+  text-align: center;
+  height:400px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#habitat{
+  background-color: black;
+  color: white;
+}

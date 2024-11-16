@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Roar for Rescue</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            color: #fff;
+            text-align: left;
+        }
+        
+        #top-container {
+          background-image: url('drinkTiger.jpg');
+          background-repeat: no-repeat;
+          background-size: 100% 140%;
+          background-position: left center;
+          padding: 30px;
+          text-align: left;
+          color: white;
+        } 
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        /* Section Titles */
+        h2 {
+            color: #d2691e;
+            border-bottom: 2px solid #d2691e;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Ongoing Projects and Events Sections */
+        .project,
+        .event {
+            background-color: #fff;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: #fff;
+            background-color: #d2691e;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #a0522d;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Recent News Container */
+        .news-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .news-container h4 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+
+        /* News Card Styling */
+        .news-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .news-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .news-date {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .news-title {
+            font-size: 1.5em;
+            color: #e67e22;
+            margin-top: 10px;
+        }
+
+        /* Content Styling for Expandable Area */
+        .news-content {
+            margin-top: 15px;
+            font-size: 1em;
+            color: #555;
+            display: none;
+            /* Hidden by default */
+        }
+
+        .news-card.expanded .news-content {
+            display: block;
+        }
+
+        .news-form {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .news-form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .news-form input[type="submit"] {
+            background-color: #e67e22;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .news-form input[type="submit"]:hover {
+            background-color: #d35400;
+        }
+
+        nav {
+            height: 70px;
+            width: 100%;
+            display: flex;
+            background: #555;
+            color: #f1f1f1;
+
+        }
+
+        #righty {
+            justify-content: right;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-size: 20px;
+            padding: 25px;
+            align-items: center;
+        }
+
+        a:hover {
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="logo.png" style="padding: 5px;">
+        <p>Roar for Rescue</p>
+        <nav id="righty">
+            <a href="Species.html">Tigris</a>
+            <a href="Involved.html">Get involved</a>
+            <a href="projects.html">News</a>
+            <a href="AboutUS.html">About Us</a>
+            <a href="Ecosystem.html">Habitat</a>
+            <a href="ClimateChange.html">Climate Change</a>
+        </nav>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div id = "top-container">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Roar for Rescue Projects, <br>Events and News</h1>
+        <p>Our mission to protect Bengal tigers and their habitats.</p><br><br><br><br><br><br><br><br><br>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Ongoing Projects Section -->
+        <section>
+            <h2>Ongoing Projects</h2>
+
+            <!-- Petition Project for Nepal -->
+            <div class="project">
+                <h3>Petition to Protect the Chitwan National Park, Nepal</h3>
+                <p>Roar for Rescue is calling for support to protect the critical habitats within the Chitwan National
+                    Park in Nepal. This area is home to Bengal tigers, rhinos, and countless other endangered species.
+                    Join us in petitioning the Nepalese government to expand protections and prevent encroachment on
+                    these precious lands.</p>
+                <a href="https://example.com/petition" class="button" target="_blank">Sign the Petition</a>
+            </div>
+
+            <!-- Additional Ongoing Projects (Placeholder) -->
+            <div class="project">
+                <h3>Community Awareness Program</h3>
+                <p>We’re actively working to raise awareness in communities near tiger habitats about the importance of
+                    conservation and coexistence with wildlife. Our workshops, educational outreach, and community
+                    programs aim to foster a deep connection with and respect for Bengal tigers and their ecosystems.
+                </p>
+                <a href="https://example.com/community-awareness" class="button" target="_blank">Learn More</a>
+            </div>
+
+            <div class="project">
+                <h3>Youth Outreach Program</h3>
+                <p>Our 2024 Youth outrach program in Bnagladesh and India both started on October 15th and they can proudly say that been able to make differences in the world. Our 12 students in India have been busy planning and prepping, while the team in Bangladesh has been busy caring and helping. 
+                </p>
+                <a href="https://example.com/community-awareness" class="button" target="_blank">Learn More</a>
+            </div>
+            
+            <div class="project">
+                <h3>Media Awareness</h3>
+                <p>Our media presence helps raise
+                </p>
+                <a href="https://example.com/community-awareness" class="button" target="_blank">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section>
+            <h2>Upcoming Events</h2>
+
+            <!-- Example Event 1 -->
+            <div class="event">
+                <h3>Virtual Webinar: Protecting Endangered Habitats</h3>
+                <p>Join us for an informative webinar on the state of endangered habitats in South Asia and what we can
+                    do to protect them. Learn from conservation experts, get involved in meaningful discussions, and
+                    discover how you can make a difference.</p>
+                <p><strong>Date:</strong>December 15, 2024</p>
+                <a href="https://example.com/webinar-signup" class="button" target="_blank">Register Now</a>
+            </div>
+
+            <!-- Example Event 2 -->
+            <div class="event">
+                <h3>Fundraiser Gala in New Delhi</h3>
+                <p>Join us for an evening dedicated to raising funds for our ongoing conservation projects. Enjoy an
+                    engaging night with guest speakers, live entertainment, and opportunities to contribute to a noble
+                    cause. All proceeds go towards conservation efforts to protect Bengal tigers and their habitats.</p>
+                <p><strong>Date:</strong> March 22, 2025</p>
+                <a href="https://example.com/fundraiser-gala" class="button" target="_blank">Buy Tickets</a>
+            </div>
+            
+            <!-- Example Event 3 -->
+            <div class="event">
+                <h3>Local Event in Goa</h3>
+                <p>Join us for an fundraiser at Gandlesh Secondary School organized by its high school committee in hopes to raise money for an expansion of the newly built reserach center. Enjoy games, carnival rides, food, drinks, performances, and learn something new about our precious guest star of the Night: Tejas the Tiger!! All proceeds go towards conservation efforts going on in the Raja Observatory and Lab. </p>
+                <br>
+                <p><strong>Date:</strong> November 20, 2024</p>
+            </div>
+
+            <!-- Example Event 4 -->
+            <div class="event">
+                <h3>Taylor Swift Concert</h3>
+                <p>Taylor Swift is performing a final concert for 2024 Eras Tour in Jakarta International Stadium, Indonesia. 90% of proceeds made from tickets will be donated, and Taylor has agreed to match the amount made!!! Roar for Rescue will use this donation for future projects, restoration, land purchases, other events and sanctuaries. Use the promo code: SigningTigers13 to get 50% off until November 15!!</p>
+                <p><strong>Date:</strong> Decmeber 20, 2024</p>
+                <a href="https://example.com/fundraiser-gala" class="button" target="_blank">Buy Tickets</a>
+            </div>
+        </section>
+        
+        <div class="news-container">
+            <h2 style="text-align: left;">Recent News</h4>
+            <div class="news-card" onclick="toggleCard(this)">
+            <div class="news-header">
+                <p class="news-date">November 5, 2024</p>
+                <h3 class="news-title">Suprise Taylor Swift Concert!!!!!</h3>
+            </div>
+                <div class="news-content">
+                    <p style="padding:0px 40px;">Taylor Swift has agreed to perform a suprise concert in Jakarta, Indonesia. The american self-made billionaire who will finsih the Eras tour in Vancouver wwill than do a final suprise concert on December 20 to finish of the year. 90% of proceeds made from the concert with be donated to Roar of Rescue, and Taylor has agreed to match the amount with a personal donation. So go buy the tickets!!! Linked in the events section, as well as a special promo code for members. </p>
+                    
+                </div>
+            </div>
+    
+                <!-- News Card 2 with Form -->
+                <div class="news-card" onclick="toggleCard(this)">
+                    <div class="news-header">
+                        <p class="news-date">October 29, 2024</p>
+                        <h3 class="news-title">Rajanga Gives Birth to Twin Boys! Vote for Their Names</h3>
+                    </div>
+                    <div class="news-content">
+                        <p style="padding:0px 40px;">Rajana, a mother tiger living in the western Indian mangrove
+                            swamps, gave
+                            birth to twin cubs last week. The two boys are healthy and growing fast, yet they still
+                            don't have
+                            names! Vote now before November 14 to choose their names.</p>
+                        <form class="news-form">
+                            <input type="radio" id="VV" name="name" value="Virat and Vijay">
+                            <label for="VV">Virat and Vijay</label><br>
+                            <input type="radio" id="King" name="name" value="Raj and Khan">
+                            <label for="King">Raj and Khan</label><br>
+                            <input type="radio" id="name" name="name" value="Anan and Varun">
+                            <label for="name">Anan and Varun</label><br>
+                            <input type="radio" id="AA" name="name" value="Aadi and Amir">
+                            <label for="AA">Aadi and Amir</label><br>
+                            <input type="radio" id="Eng" name="name" value="Leo and Sam">
+                            <label for="Eng">Leo and Sam</label><br>
+                            <input type="radio" id="Norse" name="name" value="Thor and Loki">
+                            <label for="Norse">Thor and Loki</label><br>
+                            <input type="submit" value="Submit"
+                                onclick="this.parentNode.innerHTML = 'Thank you for voting!<br> The name reveal is on November 20.<br> Save the Date!!';">
+                        </form>
+                    </div>
+                </div>
+
+                <!-- News Card 2 -->
+                <div class="news-card" onclick="toggleCard(this)">
+                    <div class="news-header">
+                        <p class="news-date">October 15, 2024</p>
+                        <h3 class="news-title">Almost to 800 Signatures! Help Us Reach Our Goal</h3>
+                    </div>
+                    <div class="news-content">
+                        <p>We’re almost at 800 signatures on our petition to pass legislation protecting the forest
+                            regions in
+                            Nepal. There is a population of 50-75 tigers living in this region of the forest and many
+                            are in
+                            danger of losing what little remains of their once 2000 acre mangrove forest. Now with less
+                            than a
+                            thousand acres, we must protect every area possible, hoepefully starting with this 400 acre
+                            region
+                            in Southeast Nepal. Sign now and make a difference!</p>
+                        <p><a href="https://www.change.org/p/protect-nepalese-tiger-habitat" target="_blank">Sign the
+                                petition
+                                here!</a></p>
+                    </div>
+                </div>
+
+                <!-- News Card 3 -->
+                <div class="news-card" onclick="toggleCard(this)">
+                    <div class="news-header">
+                        <p class="news-date">September 30, 2024</p>
+                        <h3 class="news-title">Tiger Remains Found in Mongolia Dated to 30 Years</h3>
+                    </div>
+                    <div class="news-content">
+                        <p>A recent study reveals evidence of tiger remains in Mongolia, carbon-dated to 30 years old.
+                            This
+                            discovery changes our understanding of tiger lifespans and habitats. This tiger, which they
+                            have
+                            named Raja after Raj, the previous owner of the longest lifespan award, was alive more than
+                            500
+                            years ago, and may have even seen the Mongol Empire! Since could mean that tigers, while
+                            they may no
+                            longer be able to, used to have longer lifespans. The causes of this decline may even be
+                            human
+                            caused since most tigers live in pollutated, shruken and even non-natural habitats. Read the
+                            article
+                            <a href="">Here</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- News Card 4 -->
+                <div class="news-card" onclick="toggleCard(this)">
+                    <div class="news-header">
+                        <p class="news-date">September 9, 2024</p>
+                        <h3 class="news-title">Happy Birthday Tara!! Celebrating 23 Years</h3>
+                    </div>
+                    <div class="news-content">
+                        <p>Tara, our oldest resident tiger, just turned 23! She celebrated her birthday with the youth
+                            outreach
+                            program at our sanctuary in Bhutan. Join us in wishing her a happy birthday! Throughout
+                            their
+                            wonderful life Tara has faced many challenges, with poachers and agriculture detroying the
+                            habaiat
+                            she once called home. This goes to remidn us that tigers are still suffereing out there and
+                            everyday, we have a chance to make sure another human isn't the cause of their discomfort.
+                            Let us be
+                            happy that Tara has found a safer and better home in Bhutan, but pray that eventually every
+                            tiger
+                            will be just as happy in the wild without human help.</p>
+                    </div>
+                </div> 
+                    
+                <!-- News Card 5 -->
+                <div class="news-card" onclick="toggleCard(this)">
+                    <div class="news-header">
+                        <p class="news-date">August 31, 2024</p>
+                        <h3 class="news-title">Youth Outreach Program Results Are In!</h3>
+                    </div>
+                    <div class="news-content">
+                        <p>The results of the Youth Outreach Program are out! Congratulations to the lucky 12
+                            participants who will join us for an unforgettable experience in tiger conservation. finish
+                            writing this out</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Open the first card on page load
+        const firstCard = document.querySelector(".news-card");
+        firstCard.classList.add("expanded");
+        // Toggle display of news card content
+        function toggleCard(cardElement) {
+            if (cardElement.classList.contains("expanded")) {
+                // If the card is already expanded, close it
+
+            } else {
+                // If the card is not expanded, close any other expanded cards
+                const expandedCards = document.querySelectorAll(".news-card.expanded");
+                expandedCards.forEach(card => {
+                    card.classList.remove("expanded");
+                });
+                // Then expand the current card
+                cardElement.classList.add("expanded");
+            }
+        }
+
+    </script>
+    </script>
+</body>
+
+</html>
